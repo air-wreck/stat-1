@@ -1,1 +1,3 @@
-# later, we'll need to ignore auxiliary LaTeX files
+# we need to ignore auxiliary LaTeX files
+*.aux
+*.log

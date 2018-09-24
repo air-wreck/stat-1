@@ -1,6 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# set font consistent with LaTeX, although it takes much longer to render
+plt.rc('text', usetex=True)
+plt.rc('font', family='serif')
+
 # data set: women's heights, in inches
 heights = [68.5, 57.4, 53.2, 58.6, 65.6, 59.3, 56.7, 63.3, 62.4, 70.4, 63.1,
            62.1, 59.3, 70.5, 62.1, 50.2, 57.9, 62.4, 67.7, 65.4, 59.0, 58.9,
@@ -20,7 +24,7 @@ fig_hist.savefig('histogram.pdf', bbox_inches='tight')
 # pie chart
 fig_pie, ax_pie = plt.subplots()
 ax_pie.pie(bin_data, colors=plt.cm.viridis(np.linspace(0, 1, len(bins))),
-    labels=bin_labels, autopct='%.0f%%', wedgeprops=dict(edgeColor='black'))
+    labels=bin_labels, autopct='%.0f\\%%', wedgeprops=dict(edgeColor='black'))
 ax_pie.set_xlim(-1, 1)
 ax_pie.set_ylim(-1, 1)
 ax_pie.set_aspect('equal', adjustable='box')
