@@ -1,3 +1,9 @@
 # we need to ignore auxiliary LaTeX files
 *.aux
 *.log
+
+# ignore temporary LaTeX file that Eric makes for convenience
+tmp.tex
+
+# ignore compiled Python files
+*.pyc
