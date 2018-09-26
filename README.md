@@ -17,4 +17,4 @@ Note: `-interaction=batchmode` is just because I find LaTeX's default verbose ou
 Could this be automated with a Makefile? Yes.
 
 ## dependencies
-The statistics program just requires Python 2 (with a `scipy` installation). If you want to compile the document, you'll need a LaTeX installation.
+The statistics program just requires Python 2 (with `numpy` and `matplotlib` installations). If you want to compile the document, you'll need a LaTeX installation.

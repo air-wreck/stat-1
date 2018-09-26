@@ -23,7 +23,7 @@ print '\n'.join([
   r'  \hline',
   r'  Stem & \multicolumn{%d}{l}{Leaf} \\' % ncols,
   r'  \hline',
-] + [r'  %s & %s \\' %
+] + [r'  %s. & %s \\' %
      (k, ' & '.join(bins[k] + [' '] * (ncols - len(bins[k]))))
      for k in sorted(bins)]
   + [r'  \hline', r'\end{tabular}'])
