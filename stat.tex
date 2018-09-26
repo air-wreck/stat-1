@@ -56,14 +56,14 @@
     \end{table}
 
   % Question 3
-  \item The data set possesses a left tail. This implies that is is not normally distributed; rather than being symmetric, it has a left skew.
+  \item The data set possesses a left tail. This implies that is is not normally distributed; rather than being symmetric, it has a slight left skew.
 
   % Question 4
   \item In this scenario:
     \begin{enumerate}
       \item The mean increased. Let $\bar{x} = (\Sigma x)/n$ represent the original mean, where $x$ are the original data and $n$ is the original class size. Then $\bar{x}' = (100 + \Sigma x)/(n+1)$ is the new mean. Then we have:
         \begin{equation}
-          \bar{x}' - \bar{x} = \frac{100n + \Sigma x}{n(n+1)}
+          \bar{x}' - \bar{x} = \frac{100n - \Sigma x}{n(n+1)}
         \end{equation}
       This difference is positive (indicating increase in mean) if $100 > (\Sigma x)/n = \bar{x}$; moreover, the mean of a data set cannot exceed its maximum value, so $\bar{x} \le 92$. Since $100 > 92$, the mean must have increased.
       \item For a sufficiently large class size, the median stays roughly the same. For very small classes (consider, say, a class of simply $\{71, 92\}$), the addition of a high score will appreciably change the median. However, for a class of large enough size for a ``normal distribution'' to be meaningful, this change is negligible. Loosely speaking, the new score, being greater than the original maximum, will shift the median up by half a value. Since the data are normally distributed, it is expected that the data are dense around the median, so this shift has very little impact. (It is even possible for this shift to have no impact if the median value is repeated.)
@@ -101,9 +101,9 @@
         \hline
       \end{tabular}
     \end{table}
-  There are a few noticeable trends in the data; for instance, older participants were significantly more likely to prefer classical music then their younger peers, while younger participants were much more likely to enjoy rock music. As such, we conclude:
+  There are a few noticeable trends in the data; for instance, older participants were significantly more likely to prefer classical music than their younger peers, while younger participants were much more likely to enjoy rock music. As such, we conclude:
 
-  Reject the null hypothesis. Support the alternate hypothesis. The data do support that music preference is dependent on age.
+  Fail to reject the null hypothesis. Support the alternate hypothesis. The data do support that music preference is dependent on age.
 
   \item For extra credit, the ``68-96-99.7 rule'' applies to normally distributed curves. 68\% of the data fit in between one standard deviation of the mean. 95\% of the data fit in between two standard deviations of the mean. 99.7\% of the data fit in between three standard deviations of the mean. This is called the empirical rule.
 \end{enumerate}
