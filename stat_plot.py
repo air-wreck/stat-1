@@ -35,15 +35,26 @@ boxplot['boxes'][0].set(facecolor=(1, 0.78, 0.52))
 ax_box.set_xlabel('Height (in.)')
 ax_box.get_yaxis().set_visible(False)
 box_label = '\n'.join([
-    'Min = %.2f' % min(heights),
-    'Q1 = %.2f' % np.percentile(heights, 25),
-    'Med = %.2f' % np.median(heights),
-    'Q3 = %.2f' % np.percentile(heights, 75),
-    'Max = %.2f' % max(heights)
+    'Min = %.1f' % min(heights),
+    'Q1 = %.1f' % np.percentile(heights, 25),
+    'Med = %.1f' % np.median(heights),
+    'Q3 = %.1f' % np.percentile(heights, 75),
+    'Max = %.1f' % max(heights)
 ])
 box_style = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
 ax_box.text(0.05, 0.95, box_label, transform=ax_box.transAxes, fontsize=12,
     va='top', bbox=box_style)
+def add_label(args):
+    text, val = args
+    ax_range = ax_box.get_xlim()[1] - ax_box.get_xlim()[0]
+    rel_x = (val - ax_box.get_xlim()[0]) / ax_range
+    ax_box.text(rel_x, 0.4, text, transform=ax_box.transAxes,
+                va='top', ha='center')
+map(add_label, (('Min', min(heights)),
+                ('Q1', np.percentile(heights, 25)),
+                ('Med', np.median(heights)),
+                ('Q3', np.percentile(heights, 75)),
+                ('Max', max(heights))))
 ax_box.xaxis.grid(linestyle='--')
 fig_box.savefig('plots/box.pdf', bbox_inches='tight')
 
